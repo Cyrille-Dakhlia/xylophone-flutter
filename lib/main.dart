@@ -5,13 +5,12 @@ void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   static final AudioPlayer player = AudioPlayer();
-  // 3,3,5,3,3,5,3,5,8,7,6,6,5,5,2,3,4,2,2,3,4,2,4,7,6,5,7,8
+  // 3,3,5,3, 3,3,5,3, 3,5,8,7,6,6,5, 2,3,4,2, 2,3,4, 2,4,7,6,5,7,8
 
   // Future<void> playSound(int soundNumber) {
   void playSound(int soundNumber) {
     final player = AudioPlayer();
-    // player.play(AssetSource('note$soundNumber.wav'));
-    player.setSource(AssetSource('note$soundNumber.wav'));
+    player.play(AssetSource('note$soundNumber.wav'));
   }
 
   Expanded buildKey({int soundNumber, Color keyColor}) {
